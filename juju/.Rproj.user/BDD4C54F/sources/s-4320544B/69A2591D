@@ -8,12 +8,13 @@
     "hash" : "0",
     "id" : "69A2591D",
     "lastKnownWriteTime" : 2338328219548610404,
-    "last_content_update" : 1584516238185,
+    "last_content_update" : 1584519190268,
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cursorPosition" : "1,0",
-        "scrollLine" : "0",
+        "cursorPosition" : "21,0",
+        "last_setup_crc32" : "4320544Bbb338d19",
+        "scrollLine" : "12",
         "tempName" : "Untitled1"
     },
     "read_only" : false,
