@@ -1,0 +1,146 @@
+---
+title: "2020-3-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+
+```{r}
+
+
+#用vector 儲存 (值都一樣)
+c("2020-03-31T13:40:55Z","一芳","2杯","水果茶")
+```
+```{r}
+#用list儲存 可以允許裡面的value保有原本性質
+library(lubridate)
+'小明交易1' <- list(ymd_hms("2020-03-31T13:40:55Z"),"一芳",2,"水果茶")
+print(`小明交易1`)
+
+```
+#物件值可以是vector形式，也可以list
+#vector裡面加vector沒用 會被拆開
+```{r}
+c(
+  c("108學年第1學期","高級會計學","高等統計學"),
+  c("108年第二學期","食在拉丁美洲")
+  )
+```
+
+#用list可以
+
+```{r}
+# list含兩個vectors
+`小明108學年課表A` <- list(
+  c("108-1","高級會計學","高等統計學"),
+  c("108-2","食在拉丁美洲")
+)
+print(`小明108學年課表A`)
+```
+
+
+```{r}
+# list含兩個lists, 子層list又各含兩個vectors list 會把分群概念保留
+#叫做nested list 而且可以取名
+#有命名用$表示 沒命名用[1] 命名用左上反頓點`
+
+`小明108學年課表C` <- list(
+ `上學期` = list(
+    semester <- c("108-1"), # 可只寫 "108-1"
+    course <- c("高級會計學","高等統計學")
+       ),
+  list(
+    semester <- c("108-2"),
+    course <- c("食在拉丁美洲")
+  )
+)
+print(`小明108學年課表C`)
+```
+#Gihub commit
+
+
+
+```{r}
+
+course1 <- list(
+   name <- "個體經濟學",
+   teacher <- "Alice老師",
+   grade <- "85分")
+
+course2 <- list(
+   name <- "總體經濟學",
+   teacher <- "Mark老師",
+   grade <- "78分")
+
+
+course3 <- list(
+   name <- "作業研究",
+   teacher <- "Jason老師",
+   grade <- "90分")
+
+`108-1修課記錄` <- 
+  list(
+    course1,
+    course2
+  )
+  `108-2修課記錄` <- 
+  list(
+    course3
+  )
+`小明的108總學年修課紀錄` <- list(`108-1修課記錄`,`108-2修課記錄`)
+print(`小明的108總學年修課紀錄`)
+  
+```
+```{r}
+
+
+    
+ 
+city1 <- list(
+   name <- "台北市",
+   higest <- 25,
+   lowest <- 18))
+   
+
+
+print(city1)
+```
+```{r}
+city1 <- list(
+  
+  higest degree <- 25,)
+
+print(city1)
+```
+
+
+
+
+
+
+
+
+
+
+## Including PlotsD
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

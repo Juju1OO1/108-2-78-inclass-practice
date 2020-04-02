@@ -49,7 +49,11 @@ with_tz(pgTime, tzone="Europe/Paris")
 ```{r}
 studentTime <- c(
 ymd_hms("2020-03-04T08:15:27Z"), 
-ymd_hms("2020-03-18 15:39:53", tz="Asia/Taipei"), 
+ymd_hms("2020-03-18 15:39:53", tz="Asia/Taipei"),
+```
+
+
+```{r}
 ymd_hms("2020-03-18 15:39:53", tz="Asia/Taipei"))
 studentTime
 ```
