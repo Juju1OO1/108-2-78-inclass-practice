@@ -100,30 +100,37 @@ course3 <- list(
   list(
     course3
   )
-`小明的108總學年修課紀錄` <- list(`108-1修課記錄`,`108-2修課記錄`)
-print(`小明的108總學年修課紀錄`)
+"小明的108總學年修課紀錄"<- list(`108-1修課記錄`,`108-2修課記錄`)
+print("小明的108總學年修課紀錄")
   
 ```
 ```{r}
 
-
+library(lubridate)
     
  
 city1 <- list(
-   name <- "台北市",
-   higest <- 25,
-   lowest <- 18))
-   
-
-
-print(city1)
-```
-```{r}
-city1 <- list(
+  name <- "台北市",
+  maxT <- 25,
+  minT <- 18
+)
+city2 <- list(
+  name <- "新北市",
+  maxT <- 24,
+  minT <- 15
   
-  higest degree <- 25,)
+)
 
-print(city1)
+date <- list(
+  today <- ymd("2020-03-31"),
+  tomorrow <- ymd("2020-04-01"
+)
+
+
+
+
+```
+
 ```
 
 
