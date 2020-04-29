@@ -41,6 +41,7 @@ library(lubridate); library(jsonlite); library(readr)
 "Error in library(lubridate) : there is no package called ‘lubridate’"
 
 ```{r ans21c}
+*
 #要在右下角的package尋找lubridate 並且打勾把這個package加到library裡面 這樣程式執行的時候才找的到
 ```
 
@@ -101,7 +102,7 @@ course_info=list(
   credits=3,
   time_place=list(c(list(
   weekday="星期三",
-  time_slots=789,
+  time_slots=c(7,8,9),
   classroom="商2F05"))
 )
 )
@@ -170,7 +171,7 @@ List of 2
 library(lubridate)
 
 accidents=list(
-  time=c(ymd_hms("2014-01-01"
+  time=c(ymd("2014-01-01"
         )),
   
   bureaus=list(
@@ -224,9 +225,9 @@ chr_fiveReceipts
 ### 4.4
 若我們想要把fiveReceipts的螢幕顯示值用sum()函數加總，在只使用as.{class name}函數下，要怎麼做？把sum完的結果存在sum_fiveReceipts。
 ```{r ans44}
-numbers <- as.integer(fiveReceipts)
-sum_fiveReceipts <- sum(numbers)
-
+numbers <- as.character(fiveReceipts)
+sum <- as.integer(numbers)
+sum_fiveReceipts <- sum(sum)
 sum_fiveReceipts
 ```
 
@@ -256,6 +257,11 @@ event_list <- list(
     tools=c(
       "anchor","axe"))
 )
+
+
+`板橋分局`=list(
+    type="駕駛人過失-其他",
+    casualties=1)
 
 ```
 
